@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #0f172a;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.5s ease;
+}
+
+#app {
+    width: 90%;
+    max-width: 500px;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+h1 { font-weight: 800; letter-spacing: -0.025em; margin-bottom: 2rem; }
+
+/* Menu Buttons */
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(110%);
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+}
+
+/* Counter Style */
+#counter-container {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#counter-display {
+    font-size: 4rem;
+    margin: 0;
+    min-width: 100px;
+}
+
+/* Settings Box */
+#settings-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background: #f1f5f9;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+input[type="color"] {
+    border: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: none;
+}
+
+.btn-back {
+    background: none;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.btn-back:hover { background: #f1f5f9; color: var(--text-main); box-shadow: none; }
+
+/* Animation per lo scherzo 23 */
+.shake-animation { animation: shake 0.5s infinite; }
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, -2px); }
+    75% { transform: translate(2px, 2px); }
+}
